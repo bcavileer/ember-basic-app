@@ -7,6 +7,7 @@ let App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
+// Generic Comment
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
