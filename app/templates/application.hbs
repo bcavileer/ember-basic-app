@@ -1,29 +1,36 @@
-<h1>Chefs</h1>
-
-<ul>
-  {{#each chefs as |chef|}}
-    {{#if chef.isAvailable}}
-      <li>Chef {{chef.name}} is here.</li>
-    {{else}}
-      <li>
-        <s>{{chef.name}}</s>
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-
-{{!-- <h1>Restaurant:</h1>
+<h1>Restaurant:</h1>
 <p>
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
 
 <ul>
+  {{#each chefs as |chef|}}
+    {{#if chef.isAvailable}}
+      <li>Cooking today: {{chef.name}}</li>
+    {{else}}
+      <li class="not-available">Not cooking: <s>{{chef.name}}</s></li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <ul>
   {{#each foods as |food|}}
     {{#if food.isAvailable}}
       <li>On the menu {{food.name}}!</li>
     {{else}}
-      <li>
+      <li class="not-available">
         <s>{{food.name}}</s>
       </li>
     {{/if}}
