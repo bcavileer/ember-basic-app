@@ -11,7 +11,7 @@ module.exports = function(environment) {
       projectId: "menu-tracker-3c6b7",
       storageBucket: "menu-tracker-3c6b7.appspot.com",
       messagingSenderId: "307005239795"
-    }
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
