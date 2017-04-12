@@ -1,4 +1,19 @@
-<h1>Restaurant:</h1>
+<h1>Chefs</h1>
+
+<ul>
+  {{#each chefs as |chef|}}
+    {{#if chef.isAvailable}}
+      <li>Chef {{chef.name}} is here.</li>
+    {{else}}
+      <li>
+        <s>{{chef.name}}</s>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+{{!-- <h1>Restaurant:</h1>
 <p>
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
@@ -15,4 +30,4 @@
   {{/each}}
 </ul>
 <hr>
-{{input value=restaurant.name}}
+{{input value=restaurant.name}} --}}
