@@ -1,14 +1,4 @@
-<h1>Chef tracker</h1>
-
-<ul>
-  {{#each chefs as |chef|}}
-    <li>
-      Delicious food, cooked by: {{chef.name}}. Cooking today: {{chef.isAvailable}}
-    </li>
-  {{/each}}
-</ul>
-
-{{!-- <h1>Restaurant:</h1>
+<h1>Restaurant:</h1>
 <p>
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
@@ -16,9 +6,10 @@
 <ul>
   {{#each foods as |food|}}
     <li>
-      On the menu {{food.name}}! Currently available: {{food.isAvailable}}
+      On the menu {{food.name}}!
+      {{if food.isAvailable '' 'Out Of Stock'}}
     </li>
   {{/each}}
 </ul>
 <hr>
-{{input value=restaurant.name}} --}}
+{{input value=restaurant.name}}
