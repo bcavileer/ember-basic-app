@@ -5,10 +5,13 @@
 
 <ul>
   {{#each foods as |food|}}
-    <li>
-      On the menu {{food.name}}!
-      {{if food.isAvailable '' 'Out Of Stock'}}
-    </li>
+    {{#if food.isAvailable}}
+      <li>On the menu {{food.name}}!</li>
+    {{else}}
+      <li>
+        <s>{{food.name}}</s>
+      </li>
+    {{/if}}
   {{/each}}
 </ul>
 <hr>
