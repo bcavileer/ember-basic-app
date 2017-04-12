@@ -1,8 +1,8 @@
-<h1>Restaurant:</h1>
+<h1 {{action "wasClicked" "Heading"}}>Restaurant:</h1>
 <p>
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
-
+<button {{action "wasClicked" "Button"}}>Click me!</button>
 <ul>
   {{#each foods as |food|}}
     {{#if food.isAvailable}}

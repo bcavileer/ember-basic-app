@@ -8,5 +8,10 @@ export default Ember.Controller.extend({
       {name: 'Vegetables', isAvailable: true},
       {name: 'Fruit Smoothies', isAvailable: false}
   ],
-    restaurant: {name: 'I don\'t know, the place your girlfriend is always talking about', yearsOpen: 3}
+    restaurant: {name: 'I don\'t know, the place your girlfriend is always talking about', yearsOpen: 3},
+    actions: {
+      wasClicked(elementName){
+        alert(`You Clicked ${elementName}!`)
+      }
+    }
 });
