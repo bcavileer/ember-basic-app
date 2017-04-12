@@ -1,13 +1,15 @@
-<h1>Menu Tracker</h1>
+<h1>Restaurant:</h1>
 <p>
- Menu tracker helps you see what dishes are available today.
+ {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
 
 
 <ul>
-  {{#each chefs as |chefs|}}
+  {{#each foods as |foods|}}
     <li>
-      This chef's name is {{chefs}}
+      This chef's name is {{foods}}
     </li>
   {{/each}}
 </ul>
+<hr>
+{{input value=restaurant.name}}
