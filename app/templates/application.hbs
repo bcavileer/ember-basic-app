@@ -4,28 +4,6 @@
 </p>
 
 <ul>
-  {{#each chefs as |chef|}}
-    {{#if chef.isAvailable}}
-      <li>Cooking today: {{chef.name}}</li>
-    {{else}}
-      <li class="not-available">Not cooking: <s>{{chef.name}}</s></li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{!-- <ul>
   {{#each foods as |food|}}
     {{#if food.isAvailable}}
       <li>On the menu {{food.name}}!</li>
@@ -37,4 +15,4 @@
   {{/each}}
 </ul>
 <hr>
-{{input value=restaurant.name}} --}}
+{{input value=restaurant.name}}
