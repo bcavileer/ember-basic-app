@@ -1,15 +1,15 @@
-<h1>Chefs on duty</h1>
+<h1>Chefs</h1>
 <ul>
-  {{#each chefs as |chef|}}
+  {{#each model as |chef|}}
     {{#if chef.isAvailable}}
       <li>
         {{chef.name}}
-        <button {{action "makeUnavailable" chef}}>Make Unavailable</button>
+        <button {{action 'makeUnavailable' chef}}>Make Unavailable</button>
       </li>
     {{else}}
       <li>
         <s>{{chef.name}}</s>
-        <button {{action "makeAvailable" chef}}>Make Available</button>
+        <button {{action 'makeAvailable' chef}}>Make Available</button>
       </li>
     {{/if}}
   {{/each}}
@@ -38,7 +38,7 @@
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
 <ul>
-  {{#each foods as |food|}}
+  {{#each model as |food|}}
     {{#if food.isAvailable}}
       <li>
         On the menu {{food.name}}!
