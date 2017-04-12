@@ -1,15 +1,18 @@
-<h1 {{action "wasClicked" "Heading"}}>Restaurant:</h1>
+<h1>Restaurant:</h1>
 <p>
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
-<button {{action "wasClicked" "Button"}}>Click me!</button>
 <ul>
   {{#each foods as |food|}}
     {{#if food.isAvailable}}
-      <li>On the menu {{food.name}}!</li>
+      <li>
+        On the menu {{food.name}}!
+        <button {{action 'makeUnavailable' food}}>Make Unavailable</button>
+      </li>
     {{else}}
       <li class="not-available">
         <s>{{food.name}}</s>
+        <button {{action 'makeAvailable' food}}>Make Available</button>
       </li>
     {{/if}}
   {{/each}}
