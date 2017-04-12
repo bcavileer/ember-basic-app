@@ -1,5 +1,5 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    foods: ['Tacos', 'Salad', 'Pizza', 'Vegetables', 'Fruit Smoothies']
+    chefs: ['Anthony Bourdain', 'Gordon Ramsey', 'Some Chefguy', 'Some Cheflady']
 });
