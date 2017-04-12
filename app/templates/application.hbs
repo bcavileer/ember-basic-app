@@ -3,11 +3,10 @@
  {{restaurant.name}} has been open for {{restaurant.yearsOpen}} years running on your empty wallet
 </p>
 
-
 <ul>
-  {{#each foods as |foods|}}
+  {{#each foods as |food|}}
     <li>
-      This chef's name is {{foods}}
+      On the menu {{food.name}}! Currently available: {{food.isAvailable}}
     </li>
   {{/each}}
 </ul>
